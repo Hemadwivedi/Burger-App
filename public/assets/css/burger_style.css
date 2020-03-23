@@ -1,0 +1,16 @@
+#body-handler{
+    background-color: darkgoldenrod;
+}
+#imgID{
+    height: 500px;
+    width: 500px;
+}
+
+
+#burgerName{
+    margin-right: 40px;
+}
+#submitId{
+margin-left: 50px;
+    background-color: aqua;
+}
