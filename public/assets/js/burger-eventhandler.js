@@ -1,6 +1,6 @@
 $(function () {
 
-    $(".create-form").on("submit", function (event) {
+    $("#submitId").on("click", function (event) {
         event.preventDefault();
         const burger = $("#burgerName").val().trim();
         const obj = {
