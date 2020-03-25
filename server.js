@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
 const methodOverride = require('method-override');
-const env = require("dotenv").config();
 
 const burgersController = require("./controllers/burgers_controller.js");
 
