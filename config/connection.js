@@ -1,7 +1,7 @@
 //set up mysql connection
 const mysql = require("mysql");
 
-const connection = () => {
+const getConnection = () => {
     if (process.env.JAWSDB_URL) {
         return mysql.createConnection(process.env.JAWSDB_URL);
     } else {
@@ -15,9 +15,10 @@ const connection = () => {
     }
 };
 
+const connection = getConnection();
 
 //make connection
-connection().connect(function (err) {
+connection.connect(function (err) {
     if (err) {
         console.error(`error connecting: ${err.stack} with connection ULR ${process.env.JAWSDB_URL}`);
     }
