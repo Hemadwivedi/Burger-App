@@ -1,9 +1,9 @@
 //set up mysql connection
 const mysql = require("mysql");
-if(process.env.JAWSDB_URL) {
-    connection=mysql.createConnection(process.env.JAWSDB_URL);
-
-}else{
+if (process.env.JAWSDB_URL) {
+    console.log(process.env.JAWSDB_URL)
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
     connection = mysql.createConnection({
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,
@@ -11,7 +11,8 @@ if(process.env.JAWSDB_URL) {
         password: process.env.DB_PASSWORD,
         database: process.env.DATABASE
     });
-};
+}
+;
 
 //make connection
 connection.connect(function (err) {
